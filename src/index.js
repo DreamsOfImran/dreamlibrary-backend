@@ -28,7 +28,7 @@ app.get("/my_profile", auth, (req, res) => {
   res.send(req.user);
 });
 
-const port = env.process.PORT || 3000;
+const port = process.env.PORT || 3000;
 
 app.listen(port, (req, res) => {
   console.log(`Server started and running on PORT ${port}`);
